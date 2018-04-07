@@ -48,7 +48,7 @@ module.exports = (env) => {
         devtool: isProduction ? 'source-map' : 'inline-source-map',      // to see source js file for debug
         devServer: {
             contentBase: path.join(__dirname, 'public'),    // path to build for dev server, not production
-            historyApiFallback: true,                       // to enable client side routing and return index.html on 404s w/ react-router 
+            historyApiFallback: true,                       // to enable client side routing w/ react-router and serve up index.html on 404s
         }
     }
 }
