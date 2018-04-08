@@ -13,7 +13,7 @@ module.exports = (env) => {
     return {
         entry: './src/app.js',
         output: {                                           // path to build for production bundle.js
-            path: path.join(__dirname, 'public'),           
+            path: path.join(__dirname, 'public', 'dist'),           
             filename: 'bundle.js'
         },
         module: {
@@ -49,6 +49,7 @@ module.exports = (env) => {
         devServer: {
             contentBase: path.join(__dirname, 'public'),    // path to build for dev server, not production
             historyApiFallback: true,                       // to enable client side routing w/ react-router and serve up index.html on 404s
+            publicPath: '/dist/'
         }
     }
 }
